@@ -54,8 +54,7 @@ const Btn = styled(CommonButton)`
   height: 20%;
   min-height: 50px;
   box-shadow: ${(props) => `0 4px 0 0 ${props.theme.btn.violet.shadow}`};
-  background: ${(props) =>
-    `linear-gradient(0deg,  ${props.theme.btn.violet.start}, ${props.theme.btn.violet.end})`};
+  background: ${(props) => `linear-gradient(0deg,  ${props.theme.btn.violet.start}, ${props.theme.btn.violet.end})`};
   cursor: auto;
 `;
 const ClearBtn = styled(CommonButton)`
@@ -63,8 +62,7 @@ const ClearBtn = styled(CommonButton)`
   height: 20%;
   min-height: 50px;
   box-shadow: ${(props) => `0 4px 0 0 ${props.theme.btn.red.shadow}`};
-  background: ${(props) =>
-    `linear-gradient(0deg,  ${props.theme.btn.red.start}, ${props.theme.btn.red.end})`};
+  background: ${(props) => `linear-gradient(0deg,  ${props.theme.btn.red.start}, ${props.theme.btn.red.end})`};
 `;
 const Input = styled(motion.input)`
   width: 60%;
@@ -135,12 +133,8 @@ function Home() {
   return (
     <Wrapper onClick={moveToMain}>
       <CommonServiceLogo />
-      <TouchScreen
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.5, duration: 1 }}
-      >
-        주문하려시면 화면을 터치하세요
+      <TouchScreen initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.5, duration: 1 }}>
+        주문하시려면 화면을 터치하세요
       </TouchScreen>
       <AnimatePresence>
         <TableForm
